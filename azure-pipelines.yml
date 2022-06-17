@@ -14,13 +14,15 @@ strategy:
       imageName: "macOS-latest"
     windows:
       imageName: "windows-latest"
-    Python27:
-        python.version: '2.7'
+  maxParallel: 2
+  matrix:
+     Python27:
+      python.version: '2.7'
     Python36:
-        python.version: '3.6'
+      python.version: '3.6'
     Python37:
-        python.version: '3.7'
-  maxParallel: 3
+      python.version: '3.7'
+  maxParallel: 2
   
 pool:
   vmImage: $(imageName)
