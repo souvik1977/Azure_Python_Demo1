@@ -10,23 +10,15 @@ strategy:
   matrix:
     linux:
       imageName: "ubuntu-latest"
-      Python27:
-        python.version: '2.7'
-      Python36:
-        python.version: '3.6'
-      Python37:
-        python.version: '3.7'
     mac:
       imageName: "macOS-latest"
-      Python27:
-        python.version: '2.7'
-      Python36:
-        python.version: '3.6'
-      Python37:
-        python.version: '3.7'
     windows:
       imageName: "windows-latest"
-      Python37:
+    Python27:
+        python.version: '2.7'
+    Python36:
+        python.version: '3.6'
+    Python37:
         python.version: '3.7'
   maxParallel: 3
   
