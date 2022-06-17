@@ -10,23 +10,29 @@ strategy:
   matrix:
     linux:
       imageName: "ubuntu-latest"
+      Python27:
+        python.version: '2.7'
+      Python36:
+        python.version: '3.6'
+      Python37:
+        python.version: '3.7'
     mac:
       imageName: "macOS-latest"
+      Python27:
+        python.version: '2.7'
+      Python36:
+        python.version: '3.6'
+      Python37:
+        python.version: '3.7'
     windows:
       imageName: "windows-latest"
+      Python37:
+        python.version: '3.7'
   maxParallel: 3
   
 pool:
-  vmImage: "windows-latest"
+  vmImage: $(imageName)
   
-strategy:
-  matrix:
-    Python27:
-      python.version: '2.7'
-    Python36:
-      python.version: '3.6'
-    Python37:
-      python.version: '3.7'
 
 steps:
 - task: UsePythonVersion@0
